@@ -1,0 +1,107 @@
+.fill-effect {
+    position: relative;
+    width: 19%;
+    height: 100px;
+    background-color: #4d4d4d00; /* черный фон */
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.Container .fill-effect::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0; /* начальная высота 0 */
+    background-color: #8d8d8d; /* цвет заполнения */
+    transition: height 0.3s ease; /* анимация высоты */
+    z-index: 1;
+}
+
+.Container .fill-effect:hover::before {
+    height: 100%; /* заполняем полностью при наведении */
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("Oswald-font.ttf") format("TrueType");
+}
+
+.fill-effect .text {
+    position: relative;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    text-align: center;
+    padding-top: 20%;
+    font-family: "Oswald", serif;
+}
+
+body {
+    background-color: #1b1b1b;
+}
+
+.Container {
+    position: sticky;
+    left: 25%;
+    top: 1px;
+    width: 60%;
+    background-color: rgba(61, 61, 61, 0.25);
+    display: flex;
+    border-radius: 20px;
+    backdrop-filter: blur(7px);
+}
+
+.Title {
+    font-family: 'Oswald', serif;
+    font-size: 350%;
+    top: 50%;
+    color: rgb(138, 43, 226);
+    text-shadow: rgb(71, 71, 71) 8px 8px 12px;
+    font-weight: 500;
+    width: 18%;
+    text-align: center;
+}
+
+.img-container {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: -1;
+}
+
+.h-Title {
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    font-size: 200%;
+    color: whitesmoke;
+}
+
+.foot {
+    position: absolute;
+    top: 1000px;
+    left: 0px;
+    width: 100%;
+    height: 250px;
+    background-color: rgb(58, 58, 58);
+}
+
+.smlinkcont {
+    position: absolute;
+    top: 25px;
+    left: 400px;
+    width: 550px;
+    height: 200px;
+    background-color: red;
+}
+
+.smlink {
+    position: relative;
+    width: 250px;
+    height: 80px;
+    background-color: green;
+}
