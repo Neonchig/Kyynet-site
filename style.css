@@ -44,7 +44,7 @@ body {
 
 .Container {
     position: sticky;
-    left: 25%;
+    left: 20%;
     top: 1px;
     width: 60%;
     background-color: rgba(61, 61, 61, 0.25);
@@ -54,16 +54,16 @@ body {
 }
 
 .Title {
+    position: relative;
     font-family: 'Oswald', serif;
     font-size: 350%;
     top: 50%;
-    color: rgb(138, 43, 226);
+    left: 3%;
     text-shadow: rgb(71, 71, 71) 8px 8px 12px;
     font-weight: 500;
     width: 18%;
-    text-align: center;
+    color: rgb(197, 39, 171);
 }
-
 .img-container {
     position: absolute;
     top: 0px;
@@ -92,16 +92,84 @@ body {
 
 .smlinkcont {
     position: absolute;
-    top: 25px;
+    top: 400px;
     left: 400px;
-    width: 550px;
-    height: 200px;
-    background-color: red;
+    width: 350px;
+    height: 400px;
+}
+
+.smlinkcont .arrow {
+    position: absolute;
+    color:white;
+    left: 300px;
+    bottom: 5px;
+    font-size: 50px;
 }
 
 .smlink {
-    position: relative;
-    width: 250px;
+    position: absolute;
+    width: 350px;
     height: 80px;
     background-color: green;
+    z-index: 3;
+}
+
+
+.smlink:hover {
+    .arrow {
+        animation: rotate 0.1s forwards;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    
+    to {
+        transform: rotate(45deg);
+    }
+} 
+
+.Donate-container {
+    position: absolute;
+    display: flexbox;
+    background-color: #1b1b1b;
+    left: 20%;
+    top: 125px;
+    border-radius: 15px;
+    width: 350px;
+    height: 900px;
+    justify-items: center;
+}
+
+.buybutton {
+    position: absolute;
+    left: 25px;
+    top: 80%;
+    background-color: rgb(101, 129, 255);
+    width: 300px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+.buybutton:hover {
+    transform: scale(1.1);
+    background-color: rgb(60, 94, 243);
+}
+
+.donimg {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 100px;
+    height: 320px;
+}
+
+.donate-form {
+    position: relative;
+    background-color: #1b1b1b;
+    border-radius: 15px;
+    padding: 12px 20px;
+    box-shadow: #fcfcfc 0px 0px 10px;
 }

@@ -4,3 +4,9 @@ function clickmp() {
 function clickdn() {
     window.location.href= './donate.html';
 }
+function clickrls() {
+    window.location.href= './ruleset.html';
+}
+function clickadcom() {
+    window.location.href= './admins-comun.html'
+}
